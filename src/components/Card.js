@@ -7,13 +7,13 @@ const Card = ({card, selectedCards, setselectedCards}) => {
         setselectedCards([...selectedCards, card]);
     }
 
-    useEffect(() => {
+    useEffect((() => {
         if (selectedCards[0] === card || selectedCards[1] === card || card.isMatched) {
             setIsFripped(true);
         } else {
             setIsFripped(false);
         }
-    }, [selectedCards])
+    }), [selectedCards])
 
     return (
         <div className={isFripped ?  "card open" : "card"} onClick={handleClick}>

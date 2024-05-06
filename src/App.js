@@ -59,7 +59,7 @@ function App() {
       }, 1000);
       checkMatch();
     }
-  }, [selectedCards], checkMatch);
+  }, [selectedCards]);
 
   useEffect(() => {
     if (cards.length === 0) return
@@ -70,7 +70,7 @@ function App() {
         alert('ゲームクリア！！');
       }, 500);
     }
-  }, [cards], tries);
+  }, [cards]);
 
   const checkMatch = () => {
     if (selectedCards[0].num === selectedCards[1].num) {
